@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>  
+    <header>
+        <div class="menu_side">
+            <h1>MUSICLIST</h1>
+            <div class="menu_side-playlist">
+                <h4 class="menu_side-playlist--active"><span></span><i class="music_side-icon fa-solid fa-music"></i> Playlist</h4>
+                <h4><span></span><i class="music_side-icon fa-solid fa-music"></i> Last Listening</h4>
+                <h4><span></span><i class="music_side-icon fa-solid fa-music"></i> Recommemded</h4>
+            </div>
+
+
+            <div class="menu_song">
+                <li class="songItem">
+                    <span>01</span>
+                    <img src="./assets/img/1.jpg" alt="Sơn Tùng MTP">
+                    <h5>
+                        Chúng Ta Của Tương Lai
+                        <div class="subtitle">
+                            Sơn Tùng M-TP
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="1"></i>
+                    <audio id="audio" src="./assets/audio/ChungTaCuaTuongLai-SonTungMTP-14032595.mp3"></audio> 
+                </li>
+                <li class="songItem ">
+                    <span>02</span>
+                    <img src="./assets/img/2.jpg" alt="Hòa Minzy">
+                    <h5>
+                        Em Sẽ Quên
+                        <div class="subtitle">
+                            Hòa Minzy
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="2"></i>
+                    <audio id="audio" src="./assets/audio/EmSeQuen-HoaMinzy-8870910.mp3"></audio> 
+                </li>
+                <li class="songItem ">
+                    <span>03</span>
+                    <img src="./assets/img/3.jpg" alt="Châu Khải Phong">
+                    <h5>
+                        Yêu Đi
+                        <div class="subtitle">
+                            Châu Khải Phong
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="3"></i>
+                    <audio id="audio" src="./assets/audio/YeuDi-ChauKhaiPhong-8876313.mp3"></audio> 
+                </li>
+                <li class="songItem ">
+                    <span>04</span>
+                    <img src="./assets/img/4.jpg" alt="Miu Lê">
+                    <h5>
+                        Đừng Bắt Em Phải Quên
+                        <div class="subtitle">
+                            Miu Lê
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="4"></i>
+                    <audio id="audio" src="./assets/audio/DungBatEmPhaiQuen-MiuLe-8932430.mp3"></audio> 
+                </li>
+                <li class="songItem ">
+                    <span>05</span>
+                    <img src="./assets/img/5.jpg" alt="Đức Phúc">
+                    <h5>
+                        Thất Tình
+                        <div class="subtitle">
+                            Đức Phúc
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="5"></i>
+                    <audio id="audio" src="./assets/audio/ThatTinh-DucPhuc-8870895.mp3"></audio> 
+                </li>
+                <li class="songItem ">
+                    <span>06</span>
+                    <img src="./assets/img/6.jpg" alt="Đông Nhi">
+                    <h5>
+                        Bụi Bay Vào Mắt
+                        <div class="subtitle">
+                            Đông Nhi
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="6"></i>
+                    <audio id="audio" src="./assets/audio/BuiBayVaoMat-DongNhi-8870898.mp3"></audio> 
+                </li>
+                <!-- <li class="songItem ">
+                    <span>07</span>
+                    <img src="./assets/img/7.jpg" alt="Phương Vy">
+                    <h5>
+                        Bỗng Dưng Muốn Khóc
+                        <div class="subtitle">
+                            Phương Vy
+                        </div>
+                    </h5>
+                    <i class="playListPlay" id="7"></i>
+                    <audio id="audio" src="./assets/audio/BongDungMuonKhoc-PhuongVy-8870897.mp3"></audio> 
+                </li> -->
+            </div>
+        </div>
+
+
+        <div class="song_side">
+            <div class="song_side-nav">
+                <ul class="song_side-nav--item">
+                    <li class="song_side-nav--list">Khám Phá<span></span></li>
+                    <li class="song_side-nav--list">THƯ VIỆN</li>
+                    <li class="song_side-nav--list">RADIO</li>
+                </ul>
+                <div class="song_side-search">
+                    <i class="song_side-search--icon fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Music...">
+                </div>
+            </div>
+
+            <div class="song_side-content">
+                <h1 class="song_side-content--header">Chúng Ta Của Tương Lai</h1>
+                <p>Sơn Tùng M-TP</p>
+                <div class="song_side-content--btn">
+                    <button>PLAY</button>
+                    <button>FOLLOW</button>
+                </div>
+            </div>
+            <div class="popular_song">
+                <div class="h4">
+                    <h4>Bài Hát Phổ Biến</h4>
+                    <div class="btn_s">
+                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                    </div>
+                </div>
+                <div class="pop_song">
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/8.jpg" alt="Lương Minh Trang">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="8"></i>
+                        </div>
+                        <h5>
+                            Tàn Nhẫn
+                            <div class="subtitle">
+                                Lương Minh Trang
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/TanNhan-LuongMinhTrang-8870663.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/9.jpg" alt="Jack">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="9"></i>
+                        </div>
+                        <h5>
+                            Thiên Lý Ơi
+                            <div class="subtitle">
+                                Jack 
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/ThienLyOi-JackJ97-13829746.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/10.jpg" alt="Hồ Quang Hiếu">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="10"></i>
+                        </div>
+                        <h5>
+                            Cô Phòng 
+                            <div class="subtitle">
+                                Hồ Quang Hiếu
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/CoPhong-HoQuangHieuHuynhVan-14432441.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/11.jpg" alt="Thái Học">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="11"></i>
+                        </div>
+                        <h5>
+                            Đấng Nam Nhi
+                            <div class="subtitle">
+                                Thái Học
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/fv00jfsywh.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/12.jpg" alt="Bích Phương">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="12"></i>
+                        </div>
+                        <h5>
+                            Nâng Chén Tiêu Sầu
+                            <div class="subtitle">
+                                Bích Phương
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/NangChenTieuSau-BichPhuong-14017885.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/13.jpg" alt="DatKaa">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="13"></i>
+                        </div>
+                        <h5>
+                            Có Sao Cũng Đành
+                            <div class="subtitle">
+                                DatKaa
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/CoSaoCungDanh-DatKaa-14299903.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/14.jpg" alt="Vũ Thịnh">
+                            <i class="bi playListPlay bi-play-circle-fill" id="masterPlay" id="14"></i>
+                        </div>
+                        <h5>
+                            Đợi Đến Tháng 13
+                            <div class="subtitle">
+                                Vũ Thịnh
+                            </div>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/DoiDenThang13-VuThinh-14132282.mp3"></audio> 
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="./assets/img/15.jpg" alt="RayO">
+                        </div>
+                        <h5>
+                            Cẩm Tú Cầu
+                            <div class="subtitle">
+                                RayO
+                            </div>
+                            <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                        </h5>
+                        <audio id="audio" src="./assets/audio/fv00jfsywh.mp3"></audio> 
+                    </li>
+                    
+                </div>
+            </div>
+
+            <div class="popular_song">
+                <div class="h4">
+                    <h4>Ca Sĩ Nổi Tiếng</h4>
+                    <div class="btn_s">
+                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                    </div>
+                </div>
+                <div class="song_side-artists-item">
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi1.webp" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi2.jpg" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi3.jpg" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi4.jpg" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi5.jfif" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi6.webp" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi7.jpg" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi8.webp" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi9.jpg" alt="">
+                    </li>
+                    <li class="song_side-artists-item-list">
+                        <img src="./assets/img/casi10.jpg" alt="">
+                    </li>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="master_play">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="./assets/img/1.jpg" alt="Sơn Tùng M-TP" id="posster_master_play"> 
+            <div class="singer_song">
+                <h5 id="title">Chúng Ta Của Tương Lai
+                </h5>
+                <div class="subtitle">
+                    Sơn Tùng M-TP
+                </div>
+            </div>
+            <div class="icon">
+                <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause" ></i>
+                    <i class="fas fa-play icon-play" ></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <!-- <i class="bi bi-skip-start-fill" id="back"></i>
+                <i class="bi bi-play-fill" id="masterPlay"></i>
+                <i class="bi bi-skip-end-fill" id="next"></i> -->
+                
+            </div>
+            <span id="currentStart">0:00</span>
+            <div class="bar"> 
+                <input id="progress" class="progress" type="range" value="0" min="0" max="100">
+                <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>
+            </div>
+            <span id="currentEnd">0:00</span>
+
+
+            <div class="vol">
+                <i class="bi bi-volume-down-fill"></i>
+                <input type="range" id="vol" min="0" value="50" max="100">
+                <div class="vol_bar"></div>
+                <div class="dot" id="vol_dot"></div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
